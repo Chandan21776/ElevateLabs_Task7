@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7: Titanic Survival Prediction</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<h1>Task 7: Logistic Regression – Titanic Survival Prediction</h1>
+
+<input type="file" id="fileInput" accept=".csv">
+<button onclick="runModel()">Train & Evaluate Model</button>
+
+<h2>Evaluation Metrics</h2>
+<ul>
+  <li id="accuracy"></li>
+  <li id="precision"></li>
+  <li id="recall"></li>
+  <li id="f1"></li>
+</ul>
+
+<h2>Confusion Matrix</h2>
+<table>
+  <tr>
+    <th></th><th>Predicted No</th><th>Predicted Yes</th>
+  </tr>
+  <tr>
+    <th>Actual No</th><td id="tn"></td><td id="fp"></td>
+  </tr>
+  <tr>
+    <th>Actual Yes</th><td id="fn"></td><td id="tp"></td>
+  </tr>
+</table>
+
+<h2>ROC Curve</h2>
+<canvas id="roc" width="500" height="300"></canvas>
+<p id="auc"></p>
+
+<script src="./script.js"></script>
+</body>
+</html>
